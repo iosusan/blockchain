@@ -1,0 +1,22 @@
+{
+  "name": "web2.0",
+  "version": "1.0.0",
+  "description": "web2.0 app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iosusan/blockchain.git"
+  },
+  "author": "iosu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iosusan/blockchain/issues"
+  },
+  "homepage": "https://github.com/iosusan/blockchain#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
