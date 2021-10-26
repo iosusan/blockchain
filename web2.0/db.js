@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var dbconfig = {
     host: '127.0.0.1',
     user: 'web3test',
-    'password': '#e#eMast3r',
+    password: '#e#eMast3r',
     database: 'web3test'
 }
 
@@ -13,6 +13,7 @@ function handleDisconnect(){
     connection.connect(function(err){
         if(err){
             console.log('error when connecting to database.');
+            console.log(err);
             setTimeout(handleDisconnect, 2000);
         }
     });

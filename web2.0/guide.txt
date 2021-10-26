@@ -1,0 +1,40 @@
+
+1. installing node.js on WSL2
+https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+
+2. setup vscode and addons
+
+3. setup git, and github repo
+
+4. install express.js
+
+5. install mysql on WSL2
+https://www.58bits.com/blog/2020/05/03/installing-mysql-80-under-wsl-2-and-ubuntu
+
+error "mysqld_safe Directory ‘/var/run/mysqld’ for UNIX socket file don’t exists"
+sudo mkdir /var/run/mysqld 
+sudo chown mysql:mysql /var/run/mysqld
+(this seems to happen every time)
+
+create user
+create user 'web3test'@'localhost' identified by '#e#eMast3r';
+and add permissions to test database
+create database web3test;
+grant all privileges on web3test.*  to 'web3test'@'localhost'; 
+
+$ mysql -u web3test -p -h localhost (si no se pone el localhost dice que no conecta!)
+
+(mysql workbench can be downloaded from https://dev.mysql.com/downloads/ and used
+just make sure that mysql server is running from WSL:
+sudo service mysql start)
+
+6. install postman
+https://www.postman.com/downloads/
+
+7. add nodemon
+npm install nodemon --save-dev
+
+8. install mysql library from npm
+
+9. change user to allow node.js to access database 
+mysql> ALTER USER 'web3test'@'localhost' IDENTIFIED WITH mysql_native_password BY '#e#eMast3r';
