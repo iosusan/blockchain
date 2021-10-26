@@ -33,6 +33,12 @@ app.post('/test', (req, res) => {
     res.json({requestBody:req.body})
 })
 
+app.get('/get_total_amount', async (req, res) => {
+  var result = await get_total_amount();
+  console.log(result);
+  return res.send(result)
+})
+
 app.listen(3000, ()=>{
     console.log('server is running on port 3000');
 

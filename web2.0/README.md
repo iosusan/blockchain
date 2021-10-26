@@ -1,3 +1,3 @@
 web2.0 app
 
-- node server.js to run the server
+- npm start to run the server
