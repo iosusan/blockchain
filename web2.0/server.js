@@ -3,11 +3,15 @@ const app = express();
 
 const {save_user_information} = require('./models/server_db')
 
+const path = require('path');
+const publicPath = path.join(__dirname, './public');
+
 // as of express 4.16+ there is no need to import bodyParser
 //const bodyParser = require('body-parser');
 
 /*handling all the parsing */
 app.use(express.json());
+app.use(express.static(publicPath));
 
 
 
